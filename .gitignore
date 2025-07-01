@@ -1,0 +1,17 @@
+# Ignore everything by default
+*
+
+# But keep the .gitignore itself (important for new clones)
+!.gitignore
+
+# Keep the root-level HTML entry point
+!index.html
+
+# Keep the entire assets directory and everything under it
+!assets/
+!assets/**
+
+# (Optional) – if you want to exclude build artefacts *inside* assets
+# you can re-ignore them below, e.g.:
+#  assets/css/tailwind.css.map
+#  assets/**/temp/

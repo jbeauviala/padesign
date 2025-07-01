@@ -1,0 +1,42 @@
+/* ───────────────────────────────────────────────────────────
+   input.css  ─ Tailwind v4 “CSS-first” style (no JS config)
+   ─────────────────────────────────────────────────────────── */
+
+/* 1 ▸ Bring in Tailwind’s preflight + utilities */
+@import "tailwindcss";
+
+/* 2 ▸ Declare your design tokens
+   -----------------------------------------------------------
+   `@theme` lets you override Tailwind variables or add new
+   ones.  Any variable that follows Tailwind’s naming scheme
+   automatically powers the matching utilities:
+
+     --font-sans   →  .font-sans
+     --color-reves →  .text-reves / .bg-reves / .border-reves …
+*/
+@theme {
+    /* Font stacks */
+    --font-sans:  "Apercu Pro", sans-serif;
+    --font-serif: "Portrait Text", serif;
+    --font-mono:  "JetBrains Mono", mono;
+
+    /* Brand colour in “R G B” channels (needed for opacity utilities) */
+    /* colour with safe fallback */
+    --color-reves: #eb1424;            /* plain hex for minifiers */
+    /* --color-reves-rgb: 235 20 36;      r g b channels for /opacity */
+}
+
+/* 3 ▸ Your custom styles
+   ----------------------------------------------------------- */
+@layer base {
+    h2 { @apply text-2xl font-sans font-semibold pt-8 pb-2; }
+    a { @apply text-white active:no-underline visited:text-white visited:underline hover:text-white/50; }
+    hr  { @apply py-4 border-0; }
+}
+
+@layer components {
+    .formfield {
+        @apply border-2 border-stone-300 rounded-sm p-1
+        focus:outline-none focus:border-stone-400;
+    }
+}

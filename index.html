@@ -4,34 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pa-Design</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
     <link href="./assets/css/fonts.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    sans:['"Apercu Pro"','sans-serif'],
-                    serif:['"Portrait Text"','serif'],
-                    mono:   ['"JetBrains Mono"', 'mono'],
-                },
-                extend:{colors:{reves:'#eb1424'}}
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer base {
-            a { @apply text-white active:no-underline visited:text-white visited:underline hover:text-white/50; }
-            hr {
-                @apply py-4 border-0;
-            }
-        }
-        @layer components {
-            .formfield {
-                @apply border-2 border-stone-300 rounded-sm p-1 focus:outline-none focus:border-stone-400;
-            }
-        }
-    </style>
+    <link href="./assets/css/tailwind.css" rel="stylesheet">
 
 </head>
 <body class="text-white text-xl font-sans bg-reves h-screen flex flex-col items-center justify-center">
