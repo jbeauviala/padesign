@@ -30,7 +30,7 @@
    ----------------------------------------------------------- */
 @layer base {
     h2 { @apply text-2xl font-sans font-semibold pt-8 pb-2; }
-    a { @apply text-white active:no-underline visited:text-white visited:underline hover:text-white/50; }
+    a { @apply text-white active:underline visited:text-white visited:underline hover:text-black hover:underline hover:decoration-black; }
     hr  { @apply py-4 border-0; }
 }
 

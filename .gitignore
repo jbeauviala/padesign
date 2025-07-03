@@ -6,6 +6,7 @@
 
 # Keep the root-level HTML entry point
 !index.html
+!404.html
 
 # Keep the entire assets directory and everything under it
 !assets/
